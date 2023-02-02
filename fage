@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Script for getting the time since a user followed a channel on twitch
+
+if [ $# -ne 2 ]
+then
+    echo "$0: error: expected 2 arguments, recieved $#" >> /dev/stderr
+    echo "usage: $0 <channelName> <userName>" >> /dev/stderr
+    exit 1
+fi
+
+curl "https://api.2g.be/twitch/followage/$1/$2?format=mwdhms"
