@@ -10,3 +10,4 @@ then
 fi
 
 curl "https://api.2g.be/twitch/followage/$1/$2?format=mwdhms"
+echo ""
